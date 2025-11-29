@@ -14,7 +14,7 @@ style.configure('TNotebook.Tab', font=('Arial', 10, 'bold'), padding=[10, 5])
 style.configure('Treeview', font=('Arial', 9), rowheight=25)
 style.configure('Treeview.Heading', font=('Arial', 10, 'bold'), background='#e0e0e0')
 
-# ===== Dados globais =====
+# ===== Dados globais 
 pacientes = []
 fila = []
 medicos = [
@@ -294,10 +294,11 @@ ttk.Button(frame_acesso, text="🧹 Limpar", command=limpar_verificacao).pack(pa
 text_acesso = tk.Text(frame_acesso, height=8, width=70, font=('Arial', 10), bg='#ffffff', relief=tk.FLAT)
 text_acesso.pack(pady=10)
 
-# Atualiza checkboxes ao selecionar paciente ou horário
+# Atualizar checkboxes ao selecionar paciente ou horário
 def evento_acesso(event=None):
     atualizar_checkboxes()
 combobox_acesso.bind("<<ComboboxSelected>>", evento_acesso)
 entry_horario.bind("<FocusOut>", evento_acesso)
 
 root.mainloop()
+
